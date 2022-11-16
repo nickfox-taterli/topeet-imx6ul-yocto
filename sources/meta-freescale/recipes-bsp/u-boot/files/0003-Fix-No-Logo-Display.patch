@@ -1,0 +1,14 @@
+diff --git a/common/splash.c b/common/splash.c
+index 98f0089266..9f0e19f58b 100644
+--- a/common/splash.c
++++ b/common/splash.c
+@@ -77,7 +77,7 @@ static int splash_video_logo_load(void)
+ 	return 0;
+ }
+ #else
+-static inline int splash_video_logo_load(void) { return -ENOSYS; }
++static inline int splash_video_logo_load(void) { return 0; }
+ #endif
+ 
+ __weak int splash_screen_prepare(void)
+

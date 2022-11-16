@@ -1,0 +1,17 @@
+diff --git a/drivers/usb/gadget/ci_udc.c b/drivers/usb/gadget/ci_udc.c
+index 2bae39347d..a7d14896e1 100644
+--- a/drivers/usb/gadget/ci_udc.c
++++ b/drivers/usb/gadget/ci_udc.c
+@@ -1374,10 +1374,7 @@ static int ci_udc_otg_phy_mode(struct udevice *dev)
+ 
+ 		phy_ctrl = (void __iomem *)(phy_base + USBPHY_CTRL);
+ 		val = readl(phy_ctrl);
+-		if (val & USBPHY_CTRL_OTG_ID)
+-			return USB_INIT_DEVICE;
+-		else
+-			return USB_INIT_HOST;
++		return USB_INIT_DEVICE;
+ 	} else if (is_mx7() || is_imx8mm() || is_imx8mn() || is_imx93()) {
+ 		phy_status = (void __iomem *)(phy_base +
+ 					      USBNC_PHY_STATUS_OFFSET);
+

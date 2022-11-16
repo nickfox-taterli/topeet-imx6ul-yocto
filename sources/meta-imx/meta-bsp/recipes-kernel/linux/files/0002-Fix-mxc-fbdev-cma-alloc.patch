@@ -1,0 +1,12 @@
+diff --git a/drivers/mxc/gpu-viv/hal/os/linux/kernel/platform/freescale/gc_hal_kernel_platform_imx.config b/drivers/mxc/gpu-viv/hal/os/linux/kernel/platform/freescale/gc_hal_kernel_platform_imx.config
+index 981cc8ffc83b..b6ceeb9b95e8 100644
+--- a/drivers/mxc/gpu-viv/hal/os/linux/kernel/platform/freescale/gc_hal_kernel_platform_imx.config
++++ b/drivers/mxc/gpu-viv/hal/os/linux/kernel/platform/freescale/gc_hal_kernel_platform_imx.config
+@@ -1,5 +1,5 @@
+ EXTRA_CFLAGS += -DgcdDEFAULT_CONTIGUOUS_SIZE=~0U
+-EXTRA_CFLAGS += -DgcdFSL_CONTIGUOUS_SIZE=134217728
++EXTRA_CFLAGS += -DgcdFSL_CONTIGUOUS_SIZE=16777216
+ 
+ ifneq ($(CONFIG_ANDROID),)
+ # build for android
+
